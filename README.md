@@ -1,13 +1,13 @@
-# dotfiles
+# My dotfiles repo
 
-## Sway
+## What it looks like
 
-## Polybar
+ADD A SCREENSHOT HERE
 
-## Vim
+## Install dotfiles
 
-## Wayland
-
-## Term
-
-## Others
+```bash
+cd /home/franck
+git clone git@github.com:m0numentum/dotfiles.git
+bash ./dotfiles/install.sh
+```
