@@ -55,7 +55,7 @@ font-0 = "Inconsolata:size=10;2"
 font-1 = fixed:pixelsize=10;1
 font-2 = Unifont:size=10:antialias=true:style=Medium;0
 font-3 = siji:pixelsize=10;1
-font-4 = "Wuncon Siji:size=12;2"
+font-4 = "Material:size=12;2"
 
 modules-left = i3
 modules-center = mpd
@@ -190,15 +190,15 @@ label-volume = %percentage%%
 format-muted-underline = #fd971f
 format-muted-padding = 1
 
-label-muted = " Mut"
+label-muted = " Mut"
 label-muted-foreground = #ffffff
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
-ramp-volume-3 = 
-ramp-volume-4 = 
-ramp-headphones-0 = 
-ramp-headphones-1 = 
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-3 = 
+ramp-volume-4 = 
+ramp-headphones-0 = 
+ramp-headphones-1 = 
 
 
 [module/battery]
