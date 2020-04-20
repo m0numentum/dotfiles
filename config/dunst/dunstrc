@@ -1,5 +1,5 @@
 [global]
-font = Iosevka Term 11
+font = Comfortaa 10
 
 # Allow a small subset of html markup:
 #   <b>bold</b>
@@ -70,7 +70,7 @@ hide_duplicates_count = yes
 # The width can be negative.  In this case the actual width is the
 # screen width minus the width defined in within the geometry option.
 #geometry = "250x50-40+40"
-geometry = "300x50-15+49"
+geometry = "200x200-1+35"
 
 # Shrink window if it's smaller than the width.  Will be ignored if
 # width is 0.
@@ -107,7 +107,7 @@ follow = none
 sticky_history = yes
 
 # Maximum amount of notifications kept in history
-history_length = 15
+history_length = 10
 
 # Display indicators for URLs (U) and actions (A).
 show_indicators = no
@@ -154,7 +154,7 @@ max_icon_size = 80
 # Paths to default icons.
 icon_path = /usr/share/icons/Numix/22/status/:/usr/share/icons/Numix/16/status/:/usr/share/icons/Numix/24/status/
 
-frame_width = 3
+frame_width = 1
 frame_color = "#8EC07C"
 
 [shortcuts]
@@ -181,25 +181,25 @@ context = ctrl+shift+period
 [urgency_low]
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
-frame_color = "#3B7C87"
-foreground = "#3B7C87"
-background = "#191311"
+frame_color = "#262626"
+foreground = "#ffffff"
+background = "#262626"
 #background = "#2B313C"
-timeout = 4
+timeout = 3
 
 [urgency_normal]
-frame_color = "#5B8234"
-foreground = "#5B8234"
-background = "#191311"
+frame_color = "#262626"
+foreground = "#fd971f"
+background = "#262626"
 #background = "#2B313C"
-timeout = 6
+timeout = 3
 
 [urgency_critical]
-frame_color = "#B7472A"
-foreground = "#B7472A"
-background = "#191311"
+frame_color = "#262626"
+foreground = "#f92672"
+background = "#262626"
 #background = "#2B313C"
-timeout = 8
+timeout = 3
 
 
 # Every section that isn't one of the above is interpreted as a rules to

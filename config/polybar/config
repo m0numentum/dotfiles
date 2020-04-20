@@ -18,8 +18,8 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #272822
-background-alt = #272822
+background = #262626
+background-alt = #262626
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
 foreground-alt = #555
@@ -59,7 +59,7 @@ font-4 = "Material:size=12;2"
 
 modules-left = i3
 modules-center = mpd
-modules-right =  xbacklight separator pulseaudio separator date
+modules-right =  battery separator wlan separator pulseaudio separator date separator
 
 separator ="  "
 
@@ -136,35 +136,13 @@ icon-next = 
 label-song-maxlen = 25
 label-song-ellipsis = true
 
-[module/xbacklight]
-type = internal/xbacklight
-
-format = <label> <bar>
-label = BL
-
-bar-width = 10
-bar-indicator = |
-bar-indicator-foreground = #fff
-bar-indicator-font = 2
-bar-fill = ─
-bar-fill-font = 2
-bar-fill-foreground = #9f78e1
-bar-empty = ─
-bar-empty-font = 2
-bar-empty-foreground = ${colors.foreground-alt}
-
-[module/backlight-acpi]
-inherit = module/xbacklight
-type = internal/backlight
-card = intel_backlight
-
 [module/date]
 type = internal/date
 interval = 1
 
 date =%Y-%m-%d
 
-time = %H:%M:%S
+time = %H:%M
 
 ;format-prefix = 
 ;format-prefix-foreground = ${colors.foreground-alt}
@@ -172,25 +150,39 @@ time = %H:%M:%S
 format-foreground = #ffffff
 format-underline = #66d9ef
 
-label = %date% %time%
+label = %time%
+
+[module/wlan]
+type = internal/network
+interface = wlp3s0
+format-connected = <ramp-signal>
+format-connected-foreground = #ffffff
+format-connected-padding = 1
+format-connected-underline = #a6e22e
+label-disconnected = 
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
 
 [module/pulseaudio]
 type = internal/pulseaudio
 
 click-right = exec pavucontrol &
-format-volume = <ramp-volume> <label-volume>
+format-volume = <ramp-volume>
 ;format-volume-background = #fd971f
 format-volume-foreground = #ffffff
 format-volume-underline = #fd971f
 format-volume-padding = 1
-label-volume = %percentage%%
 
 ;format-muted-background = #fd971f
 ;format-muted-foreground = #ffffff
 format-muted-underline = #fd971f
 format-muted-padding = 1
 
-label-muted = " Mut"
+label-muted = " "
 label-muted-foreground = #ffffff
 ramp-volume-0 = 
 ramp-volume-1 = 

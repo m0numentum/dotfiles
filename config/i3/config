@@ -26,18 +26,23 @@ gaps inner 20
 gaps top 30
 
 # Colors
-# red: f92672
-# blue: 66d9ef
-# green: a6e22e
-# yellow: fd971f
-# black: 272822
+# Background 	#262626 #262626
+# Foreground 	#F8F8F2 #F8F8F2
+# Comment 	#75715E #75715E
+# Red 		#F92672 #F92672
+# Orange 	#FD971F #FD971F
+# Light Orange 	#E69F66 #E69F66
+# Yellow 	#E6DB74 #E6DB74
+# Green 	#A6E22E #A6E22E
+# Blue 		#66D9EF #66D9EF
+# Purple 	#AE81FF #AE81FF
 # class			border	backgr.	text	indicator	child_border
-client.focused 		#f92672 #272822 #ffffff #f92672		#f92672
-client.focused_inactive	#272822 #272822 #ffffff #272822		#272822
-client.unfocused	#272822 #272822 #ffffff #272822		#272822
-client.urgent		#f92672 #272822 #ffffff #f92672		#f92672
-client.placeholder	#f92672 #272822 #ffffff #f92672		#f92672
-client.background	#f92672
+client.focused 		#e6db74 #262626 #ffffff #e6db74		#e6db74	
+client.focused_inactive	#262626 #262626 #ffffff #262626		#262626
+client.unfocused	#262626 #262626 #ffffff #262626		#262626
+client.urgent		#e6db74 #262626 #ffffff #e6db74		#e6db74	
+client.placeholder	#e6db74 #262626 #ffffff #e6db74		#e6db74
+client.background	#e6db74
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
