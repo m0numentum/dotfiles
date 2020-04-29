@@ -2,7 +2,9 @@
 Description=Picom
 
 [Service]
+Environment=DISPLAY=:0
 ExecStart=/usr/bin/picom --config %h/.config/picom/picom.conf
+ExecStop=killall picom
 
 [Install]
 WantedBy=default.target
