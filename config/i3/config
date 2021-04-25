@@ -56,7 +56,7 @@ font pango:monospace 10
 #exec --no-startup-id feh --bg-scale /home/franck/Images/background.png
 exec --no-startup-id dunst
 exec --no-startup-id xss-lock -- i3lock --color=121212
-exec --no-startup-id polybar -r example
+exec --no-startup-id polybar -c /home/m0numentum/.config/polybar/config.ini example
 
 # Use pactl to adjust volume in PulseAudio.
 set $notify_up /home/franck/scripts/change_vol.sh
@@ -72,13 +72,14 @@ bindsym $mod+parenright exec --no-startup-id $notify_up 1+ toggle
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec /usr/bin/kitty
+bindsym $mod+Return exec /usr/bin/xfce4-terminal
 
 # kill focused window
 bindsym $mod+F4 kill
 
 # start dmenu (a program launcher)
 bindsym $alt+F2 exec --no-startup-id rofi -show drun
+bindsym $alt+Escape exec --no-startup-id /home/m0numentum/scripts/power_menu.sh
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
