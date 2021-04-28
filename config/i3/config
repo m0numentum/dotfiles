@@ -12,8 +12,11 @@
 set $mod Mod4
 set $alt Mod1
 
+
+set $home /home/m0numentum
+
 # Configure default borders for floating and tiling windows
-default_border pixel 3
+default_border none
 default_floating_border normal
 
 # Change borders
@@ -26,23 +29,23 @@ gaps inner 20
 gaps top 30
 
 # Colors
-# Background 	#262626 #262626
-# Foreground 	#F8F8F2 #F8F8F2
-# Comment 	#75715E #75715E
-# Red 		#F92672 #F92672
-# Orange 	#FD971F #FD971F
-# Light Orange 	#E69F66 #E69F66
-# Yellow 	#E6DB74 #E6DB74
-# Green 	#A6E22E #A6E22E
-# Blue 		#66D9EF #66D9EF
-# Purple 	#AE81FF #AE81FF
+set_from_resource $black 	i3wm.color0 	#908e8f
+set_from_resource $red 		i3wm.color1 	#ff6188
+set_from_resource $yellow 	i3wm.color2 	#ffd866
+set_from_resource $green 	i3wm.color3 	#a9dc76
+set_from_resource $blue 	i3wm.color4 	#78dce8
+set_from_resource $magenta 	i3wm.color5 	#ab9df2
+set_from_resource $cyan 	i3wm.color6 	#fc9867
+set_from_resource $white 	i3wm.color7 	#fdf9f3
+set $transparent #00000000
+
 # class			border	backgr.	text	indicator	child_border
-client.focused 		#e6db74 #262626 #ffffff #e6db74		#e6db74	
-client.focused_inactive	#262626 #262626 #ffffff #262626		#262626
-client.unfocused	#262626 #262626 #ffffff #262626		#262626
-client.urgent		#e6db74 #262626 #ffffff #e6db74		#e6db74	
-client.placeholder	#e6db74 #262626 #ffffff #e6db74		#e6db74
-client.background	#e6db74
+client.focused 		$white 	$white 	$white 	$white		$white
+client.focused_inactive	$white	$white	$white	$white		$white
+client.unfocused	$transparent	$transparent	$transparent	$transparent		$transparent
+# client.urgent		#e6db74 #262626 #ffffff #e6db74		#e6db74	
+# client.placeholder	#e6db74 #262626 #ffffff #e6db74		#e6db74
+client.background	$transparent
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -53,20 +56,20 @@ font pango:monospace 10
 #font pango:DejaVu Sans Mono 8
 
 # Applications to start with i3
-#exec --no-startup-id feh --bg-scale /home/franck/Images/background.png
-exec --no-startup-id dunst
-exec --no-startup-id xss-lock -- i3lock --color=121212
-exec --no-startup-id polybar -c /home/m0numentum/.config/polybar/config.ini example
+exec --no-startup-id /usr/bin/feh --bg-scale $home/Images/wall2.jpg
+exec --no-startup-id /usr/bin/polybar -c $home/.config/polybar/config.ini example
+exec --no-startup-id xss-lock -- i3lock --color=363537
+# exec --no-startup-id dunst
 
 # Use pactl to adjust volume in PulseAudio.
-set $notify_up /home/franck/scripts/change_vol.sh
+# set $notify_up /home/franck/scripts/change_vol.sh
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
-bindsym $mod+Shift+equal exec --no-startup-id $notify_up 5%+
-bindsym $mod+equal exec --no-startup-id $notify_up 5%-
-bindsym $mod+parenright exec --no-startup-id $notify_up 1+ toggle
+# bindsym $mod+Shift+equal exec --no-startup-id $notify_up 5%+
+# bindsym $mod+equal exec --no-startup-id $notify_up 5%-
+# bindsym $mod+parenright exec --no-startup-id $notify_up 1+ toggle
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -75,11 +78,12 @@ floating_modifier $mod
 bindsym $mod+Return exec /usr/bin/xfce4-terminal
 
 # kill focused window
-bindsym $mod+F4 kill
+bindsym $alt+F4 kill
+bindsym $mod+Shift+a kill
 
 # start dmenu (a program launcher)
 bindsym $alt+F2 exec --no-startup-id rofi -show drun
-bindsym $alt+Escape exec --no-startup-id /home/m0numentum/scripts/power_menu.sh
+bindsym Control+Escape exec --no-startup-id /home/m0numentum/scripts/power_menu.sh
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -131,6 +135,8 @@ bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+q focus parent
+
+focus_follows_mouse no
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -205,13 +211,3 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-#bar {
-#        status_command i3status
-#	tray_output primary
-#}
-
-bindsym $mod+Shift+f exec "firefox"
-

@@ -1,2 +1,22 @@
-Xcursor.size: 16
-Xcursor.theme: Adwaita
+! Normal      Bright
+! --------    -------
+! 0 Black      8 Black
+! 1 Red        9 Red
+! 2 Yellow    10 Yellow
+! 3 Green     11 Green
+! 4 Blue      12 Blue
+! 5 Magenta   13 Magenta
+! 6 Cyan      14 Cyan
+! 7 White     15 White
+
+*background: #363537
+*foreground: #fdf9f3
+*color0:     #908e8f
+*color1:     #ff6188
+*color2:     #ffd866
+*color3:     #a9dc76
+*color4:     #78dce8
+*color5:     #ab9df2
+*color6:     #fc9867
+*color7:     #fdf9f3
+*color8:     #666666
