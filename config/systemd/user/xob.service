@@ -1,0 +1,17 @@
+[Unit]
+Description = XOB daemonized
+After = xob.socket
+Requires = xob.socket
+
+[Service]
+TimeoutStartSec = infinity
+Type = simple
+Sockets = xob.socket
+StandardInput = fd:xob.socket
+StandardOutput = null
+Environment = XOB_CONFIG_FILE=/home/m0numentum/.config/xob/styles.cfg
+ExecStart = /usr/bin/xob -c $XOB_CONFIG_FILE
+#ExecStop = /usr/bin/kill $(/usr/bin/pidof xob)
+
+[Install]
+WantedBy = multi-user.target
