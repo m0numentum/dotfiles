@@ -1,19 +1,25 @@
+configuration {
+	modi: "drun,window,run,ssh";
+	columns: 2;
+	font: "FiraCode 12";
+	show-icons: true;
+	icon-theme: "Flatery-Dark";
+	line-margin: 2;
+	hide-scrollbar: false;
+	theme: "/home/m0numentum/.config/rofi/app.rasi";
+	display-drun: "Applications";
+}
+
+@import "/home/m0numentum/.config/rofi/colors.rasi"
+
 * {
-    foreground:                  #f4faf2;
-    element-background:		 #353535;
-    selected-foreground:	 #ae81ff;
-    element-foreground:		 #75715e;
-    normal-foreground:           @foreground;
-    background:                  #262626;
-    selected-normal-background:  #ae81ff;
-    border-color:                @foreground;
-    background-color:            @background;
     list-element-margin:	 3px 3px;
     list-element-padding:	 10px;
     list-element-border:	 0px 0px 0px 4px;
     entry-padding:		 10px 0px 10px 0px;
     apps-textbox-prompt-colon-padding: 10px -5px 0px 0px;
 }
+
 #window {
     background-color: @background;
     border:           1;
@@ -21,14 +27,17 @@
     height:	      50%;
     padding:          40px 40px;
 }
+
 #mainbox {
     border:  0;
     padding: 0;
 }
+
 #textbox {
     text-color: @foreground;
     background-color: @element-background;
 }
+
 #element {
     border:  @list-element-border;
     border-color: @background;
@@ -36,32 +45,39 @@
     margin: @list-element-margin;
     padding: @list-element-padding;
 }
+
 #element.normal {
     background-color: @element-background;
     text-color:       @element-foreground;
 }
+
 #element.selected {
     background-color: @element-background;
     text-color:	      @selected-foreground;
     border-color:     @selected-foreground;
 }
+
 #inputbar {
     text-color: @normal-foreground;
     padding: 10px;
 }
+
 #entry {
     text-color: @normal-foreground;
-    background-color: @element-background;
+    background-color: @background;
     padding: 10px;
 }
+
 #prompt {
     text-color: @normal-foreground;
     background-color: @selected-foreground;
     padding: 10px;
 }
+
 #inputbar {
     children:   [ prompt,entry ];
 }
+
 #textbox-prompt-colon {
     expand:     false;
     str:        " ";

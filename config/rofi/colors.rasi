@@ -1,10 +1,22 @@
 /* colors */
 
 * {
-  al:    #00000000;
-  bg:    #363537FF;
-  bg1:   #FF6188FF;
-  bg2:   #AB9DF2FF;
-  bg3:   #AB9DF2FF;
-  fg:    #FDF9F3FF;
+    grey:			#908e8f;
+    red:			#ff6188;
+    green:			#a9dc76;
+    yellow:			#ffd866;
+    orange:			#fc9867;
+    violet:			#ab9df2;
+    blue:			#78dce8;
+    white:			#fdf9f3;
+
+    foreground:                 @white;
+    background:                 #363537ff;
+    element-background:         @background;
+    selected-foreground:	@violet;
+    element-foreground:         @grey;
+    normal-foreground:          @foreground;
+    selected-normal-background: @violet;
+    border-color:               @foreground;
+    background-color:           @background;
 }
