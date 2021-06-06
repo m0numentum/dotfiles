@@ -22,11 +22,7 @@ case $chosen in
 		systemctl reboot
         ;;
     $lock)
-		if [[ -f /usr/bin/i3lock ]]; then
-			i3lock
-		elif [[ -f /usr/bin/betterlockscreen ]]; then
-			betterlockscreen -l
-		fi
+        /usr/bin/betterlockscreen -l dim
         ;;
     $suspend)
 		mpc -q pause

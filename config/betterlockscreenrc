@@ -1,0 +1,19 @@
+# configuration file for betterlockscreen
+
+insidecolor=363537ff
+ringcolor=fdf9f3ff
+keyhlcolor=ff6188ff
+bshlcolor=ff6188ff
+separatorcolor=00000000
+insidevercolor=00000000
+insidewrongcolor=d23c3dff
+ringvercolor=fdf9f3ff
+ringwrongcolor=ff6188ff
+verifcolor=fdf9f3ff
+timecolor=fdf9f3ff
+datecolor=fdf9f3ff
+loginbox=36353715
+font="Fira Code Ligth"
+locktext='He is a wound in the Force'
+lock_timeout=5
+time_format='%H:%M:%S'

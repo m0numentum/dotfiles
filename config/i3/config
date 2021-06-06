@@ -58,18 +58,20 @@ font pango:monospace 10
 # Applications to start with i3
 exec --no-startup-id /usr/bin/feh --bg-scale $home/Images/wall2.jpg
 exec --no-startup-id /usr/bin/polybar -c $home/.config/polybar/config.ini example
-exec --no-startup-id xss-lock -- i3lock --color=363537
-# exec --no-startup-id dunst
+exec --no-startup-id xss-lock -- /usr/bin/betterlockscreen -l dim
+exec --no-startup-id dunst -c $home/.config/dunst/dunstrc
+exec --no-startup-id /usr/bin/picom --config $home/.config/picom/picom.conf
 
 # Use pactl to adjust volume in PulseAudio.
-# set $notify_up /home/franck/scripts/change_vol.sh
+set $notify_up /home/m0numentum/scripts/change_vol.sh
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
-# bindsym $mod+Shift+equal exec --no-startup-id $notify_up 5%+
-# bindsym $mod+equal exec --no-startup-id $notify_up 5%-
-# bindsym $mod+parenright exec --no-startup-id $notify_up 1+ toggle
+# Alternatives shortcuts when there's no special keys for sound on a keyboard
+bindsym $mod+Shift+equal exec --no-startup-id $notify_up inc
+bindsym $mod+equal exec --no-startup-id $notify_up dec
+bindsym $mod+parenright exec --no-startup-id $notify_up mute
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
