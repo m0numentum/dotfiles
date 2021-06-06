@@ -1,0 +1,144 @@
+{
+  "version": "1.11.4",
+  "squares": [
+    {
+      "name": "Reddit",
+      "links": [
+        {
+          "name": "unixporn",
+          "url": "https://www.reddit.com/r/unixporn/"
+        },
+        {
+          "name": "france",
+          "url": "https://www.reddit.com/r/france"
+        },
+        {
+          "name": "polandball",
+          "url": "https://www.reddit.com/r/polandball"
+        },
+        {
+          "name": "polandball_art",
+          "url": "https://www.reddit.com/r/polandballart"
+        },
+        {
+          "name": "battlestations",
+          "url": "https://www.reddit.com/r/battlestations"
+        }
+      ]
+    },
+    {
+      "name": "Media",
+      "links": [
+        {
+          "name": "Youtube",
+          "url": "https://youtube.com"
+        },
+        {
+          "name": "Twich",
+          "url": "https://twitch.tv"
+        }
+      ]
+    },
+    {
+      "name": "Tech Links",
+      "links": [
+        {
+          "name": "Hacker News",
+          "url": "https://news.ycombinator.com"
+        },
+        {
+          "name": "Journal du Hacker",
+          "url": "https://journalduhacker.net"
+        },
+        {
+          "name": "LinuxFR",
+          "url": "https://www.linuxfr.org"
+        }
+      ]
+    },
+    {
+      "name": "Gaming",
+      "links": [
+        {
+          "name": "Eurogamer",
+          "url": "https://eurogamer.net"
+        },
+        {
+          "name": "Destructoid",
+          "url": "https://destructoid.com"
+        },
+        {
+          "name": "PCGamer",
+          "url": "https://pcgamer.com"
+        },
+        {
+          "name": "Rock Paper Shotgun",
+          "url": "https://rockpapershotgun.com"
+        },
+        {
+          "name": "Boiling Steam",
+          "url": "https://boilingsteam.com"
+        }
+      ]
+    },
+    {
+      "name": "Music",
+      "links": [
+        {
+          "name": "Horns Up",
+          "url": "https://hornsup.fr"
+        },
+        {
+          "name": "Prog Rock Journal",
+          "url": "https://progrockjournal.com"
+        },
+        {
+          "name": "Metal Archives",
+          "url": "https://metal-archives.com"
+        },
+        {
+          "name": "r/metal",
+          "url": "https://reddit.com/r/metal"
+        },
+        {
+          "name": "r/progmetal",
+          "url": "https://reddit.com/r/progmetal"
+        }
+      ]
+    }
+  ],
+  "bool": {
+    "borders": true,
+    "alwaysopen": false,
+    "background_image": false,
+    "hide_gear_button": false
+  },
+  "style": {
+    "square_size": "175px",
+    "square_spacing": "6px",
+    "heading_font": "Fira Code Light",
+    "link_font": "Fira Code Light",
+    "heading_font_size": "14px",
+    "link_font_size": "12px",
+    "background": "#363537",
+    "foreground": "#908e8f45",
+    "heading_color": "#ab9df2",
+    "link_color": "#fdf9f3",
+    "border_color": "#fdf9f3",
+    "border_width_normal": "0",
+    "border_width_hovered": "2px 0",
+    "border_radius": "0",
+    "square_shadow": "0",
+    "focus_color": "#ab9df2",
+    "focus_bg_color": "#353637",
+    "search_color": "#78dce8",
+    "search_bg_color": "#fdf9f3"
+  },
+  "ext": {
+    "images": [
+      "https://images.unsplash.com/photo-1497076888581-9acaad5f74cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9"
+    ],
+    "size": "cover",
+    "filter": "opacity(0.2) grayscale(1)"
+  }
+}

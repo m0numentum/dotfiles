@@ -2,10 +2,10 @@
 
    /* Minimal Functional Fox variables*/
   --mff-bg: #363537;
-  --mff-icon-color: #fc9867;
+  --mff-icon-color: #fdf9f3;
   --mff-nav-toolbar-padding: 8px;
   --mff-sidebar-bg: var(--mff-bg);
-  --mff-sidebar-color: #fc9867;
+  --mff-sidebar-color: #fdf9f3;
   --mff-tab-border-radius: 6px;
   --mff-tab-color: #fdf9f3;
   --mff-tab-font-family: "FiraCode Regular", sans;
