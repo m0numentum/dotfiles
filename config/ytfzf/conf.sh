@@ -57,11 +57,11 @@ external_menu_len=220
 #the player to use for playing the video, must be able to stream from youtube-dl
 #vlc also works
 #(YTFZF_PLAYER)
-video_player="mpv"
+video_player="vlc"
 
 #the player to use when choosing a video format with $YTFZF_PREF
 #(YTFZF_PLAYER_FORMAT)
-video_player_format="mpv --ytdl-format="
+video_player_format="/home/m0numentum/scripts/youtube-vlc.sh "
 
 #the player to use for audio ( option -m )
 #(YTFZF_AUDIO_PLAYER)
@@ -136,7 +136,7 @@ show_format=0
 #the side to show thumbnails
 #options are "left", "right", "top", "bottom"
 #same as --priview-side=
-preview_side="left"
+preview_side="bottom"
 
 #the amount of links to get from each subscription
 #same as --subs=
