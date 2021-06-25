@@ -57,6 +57,7 @@ font pango:monospace 10
 
 # Applications to start with i3
 exec --no-startup-id /usr/bin/feh --bg-scale $home/Images/wall2.jpg
+exec --no-startup-id /usr/bin/mpd $home/.config/mpd/mpd.conf
 exec --no-startup-id /usr/bin/polybar -c $home/.config/polybar/config.ini example
 exec --no-startup-id xss-lock -- /usr/bin/betterlockscreen -l dim
 exec --no-startup-id dunst -c $home/.config/dunst/dunstrc
