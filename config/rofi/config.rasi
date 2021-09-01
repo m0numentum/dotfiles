@@ -1,11 +1,8 @@
 configuration {
 	modi: "drun,window,run,ssh";
-	columns: 2;
 	font: "FiraCode 12";
 	show-icons: true;
 	icon-theme: "Papirus-Dark";
-	line-margin: 2;
-	hide-scrollbar: false;
 	theme: "/home/m0numentum/.config/rofi/app.rasi";
 	display-drun: "Applications";
 }

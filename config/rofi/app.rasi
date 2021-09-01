@@ -1,87 +1,107 @@
-configuration {
-	modi: "drun,window,run,ssh";
-	columns: 2;
-	font: "FiraCode 12";
-	show-icons: true;
-	icon-theme: "Flatery-Dark";
-	line-margin: 2;
-	hide-scrollbar: false;
-	theme: "/home/m0numentum/.config/rofi/app.rasi";
-	display-drun: "Applications";
-}
 
+@import "/home/m0numentum/.config/rofi/config.rasi"
 @import "/home/m0numentum/.config/rofi/colors.rasi"
 
+listview {
+	columns: 2;
+}
+
 * {
-    list-element-margin:	 3px 3px;
-    list-element-padding:	 10px;
-    list-element-border:	 0px 0px 0px 4px;
-    entry-padding:		 10px 0px 10px 0px;
+    list-element-margin: 3px 3px;
+    list-element-padding: 10px;
+    list-element-border: 0px 0px 0px 4px;
+    entry-padding: 10px 0px 10px 0px;
     apps-textbox-prompt-colon-padding: 10px -5px 0px 0px;
 }
 
-#window {
+window {
     background-color: @background;
-    border:           1;
-    width:	      50%;
-    height:	      50%;
-    padding:          40px 40px;
+    border: 1;
+    width: 50%;
+    height: 50%;
+    padding: 40px 40px;
 }
 
-#mainbox {
-    border:  0;
+mainbox {
+    border: 0;
     padding: 0;
 }
 
-#textbox {
+textbox {
     text-color: @foreground;
     background-color: @element-background;
 }
 
-#element {
-    border:  @list-element-border;
+element {
+    children: [element-icon, element-text];
+    border: @list-element-border;
     border-color: @background;
     padding: 1px ;
     margin: @list-element-margin;
     padding: @list-element-padding;
 }
 
-#element.normal {
-    background-color: @element-background;
-    text-color:       @element-foreground;
+element-text {
+    text-color: inherit;
 }
 
-#element.selected {
-    background-color: @element-background;
-    text-color:	      @selected-foreground;
-    border-color:     @selected-foreground;
+element normal normal {
+    background-color: @background;
+    text-color: @grey;
 }
 
-#inputbar {
-    text-color: @normal-foreground;
+element normal active {
+    background-color: @background;
+    text-color: @grey;
+}
+
+element selected normal {
+    background-color: @background;
+    border-color: @violet;
+    text-color: @grey;
+}
+
+element selected urgent {
+    background-color: @background;
+    text-color:	      @grey;
+    border-color:     @violet;
+}
+
+element selected active {
+    background-color: @background;
+    text-color:	      @grey;
+    border-color:     @violet;
+}
+
+element alternate normal {
+    text-color: @grey;
+}
+
+inputbar {
+    text-color: @white;
     padding: 10px;
 }
 
-#entry {
-    text-color: @normal-foreground;
+entry {
+    text-color: @white;
     background-color: @background;
     padding: 10px;
 }
 
-#prompt {
-    text-color: @normal-foreground;
-    background-color: @selected-foreground;
+prompt {
+    text-color: @white;
+    background-color: @violet;
     padding: 10px;
 }
 
-#inputbar {
-    children:   [ prompt,entry ];
+inputbar {
+    children: [ prompt,entry ];
 }
 
-#textbox-prompt-colon {
-    expand:     false;
-    str:        " ";
-    margin:     0px 0.0em 0em 0.0em;
+textbox-prompt-colon {
+    expand: false;
+    str: " ";
+    margin: 0px 0.0em 0em 0.0em;
     text-color: @normal-foreground;
     padding: 10px;
 }
