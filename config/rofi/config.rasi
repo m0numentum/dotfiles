@@ -3,6 +3,7 @@ configuration {
 	font: "FiraCode 12";
 	show-icons: true;
 	icon-theme: "Papirus-Dark";
-	theme: "/home/m0numentum/.config/rofi/app.rasi";
 	display-drun: "Applications";
 }
+
+@theme "/home/m0numentum/.config/rofi/app.rasi"

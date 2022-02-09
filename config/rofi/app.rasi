@@ -1,10 +1,17 @@
-
-@import "/home/m0numentum/.config/rofi/config.rasi"
 @import "/home/m0numentum/.config/rofi/colors.rasi"
+
+/*configuration {
+	modi: "drun,window,run,ssh";
+	font: "FiraCode 12";
+	show-icons: true;
+	icon-theme: "Papirus-Dark";
+	display-drun: "Applications";
+}*/
 
 listview {
 	columns: 2;
 }
+/*@import "/home/m0numentum/.config/rofi/config.rasi"*/
 
 * {
     list-element-margin: 3px 3px;
