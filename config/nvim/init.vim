@@ -24,8 +24,8 @@ nnoremap <S-T> :NERDTree %<CR>
 nnoremap <S-W> :tabclose<CR>
 nnoremap <F12> :call Loc()<CR>
 "nnoremap <S-F12> :lclose<CR>
-nnoremap <C-F> :tabprevious<CR>
-nnoremap <C-P> :tabnext<CR>
+nnoremap <C-E> :tabprevious<CR>
+nnoremap <C-T> :tabnext<CR>
 " Move tab right
 nnoremap <C-H> :tabm -1<CR>
 " Move tab left
@@ -35,12 +35,13 @@ nnoremap <C-B> :tabnew term://bash<CR>
 " Refresh file
 nnoremap <F5> :e!<CR>
 nnoremap <C-Space> <C-w>
+nnoremap <Space> za<CR>
 
 
 " Mapping shortcuts (insert mode)
 inoremap <F12> <C-o>:call Loc()<CR>
-inoremap <C-F> <C-o>:tabprevious<CR>
-inoremap <C-P> <C-o>:tabnext<CR>
+inoremap <C-E> <C-o>:tabprevious<CR>
+inoremap <C-T> <C-o>:tabnext<CR>
 inoremap <C-H> <C-o>:tabm +1<CR>
 inoremap <C-L> <C-o>:tabm -1<CR>
 inoremap <F3> <C-o>:noh<CR>
@@ -48,8 +49,9 @@ inoremap <C-B> <C-o>:tabnew term://bash<CR>
 inoremap <F5> <C-o>:e!<CR>
 
 "" Mapping in terminal mode
-tnoremap <C-X> <C-\><C-N>:q!<CR>
-tnoremap <Esc> <C-\><C-N><CR>
+" set termwinkey=<C-@>
+tnoremap <C-X> <C-@>:q!<CR>
+tnoremap <Esc> <C-@><C-N><CR>
 
 
 " Configuration for python files
@@ -100,16 +102,6 @@ au BufNewFile,BufRead *.js
 	\ set autoindent |
 	\ set fileformat=unix |
 
-" Configuration for puppet manifest files
-au BufRead,BufNewFile *.pp
-	\ set tabstop=2 |
-	\ set softtabstop=2 |
-	\ set shiftwidth=2 |
-	\ set expandtab |
-	\ set autoindent |
-	\ set fileformat=unix |
-	\ set filetype=puppet |
-
 " Configuration for YAML files
 au Filetype yaml call Do_my_stuff_yaml()
 function Do_my_stuff_yaml()
@@ -121,16 +113,15 @@ function Do_my_stuff_yaml()
 	setlocal fileformat=unix
 endfunc
 
-" Configuration for erb templates
-au Filetype eruby call Do_my_stuff()
-function Do_my_stuff()
-	setlocal tabstop=4
-	setlocal softtabstop=4
-	setlocal shiftwidth=4
-	setlocal expandtab
-	setlocal autoindent
-	setlocal fileformat=unix
-endfunc
+au BufNewFile,BufRead *.rasi 
+	\ setf css |
+	\ set tabstop=4 |
+	\ set softtabstop=4 |
+	\ set shiftwidth=4 |
+	\ set textwidth=79 |
+	\ set expandtab |
+	\ set autoindent |
+	\ set fileformat=unix |
 
 " netrw configuration
 let g:netrw_browse_split = 0	   " Replace  netrw with the opened file
