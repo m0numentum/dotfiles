@@ -18,6 +18,7 @@ alias rm="rm -i"
 PS1='[\u@\h \W]\$ '
 export EDITOR=vim
 export XDG_CONFIG_HOME=${HOME}/.config
+export XCURSOR_PATH=${XCURSOR_PATH}:~/.icons
 #export PATH=$PATH:${HOME}/.local/bin:${HOME}/scripts:/usr/local/go/bin
 #export MONITOR=$(xrandr -q | awk '/ connected/ {print $1}')
 #export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
