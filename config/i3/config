@@ -72,7 +72,7 @@ client.background	$base
 ## none = without border
 ## normal = title bar & border
 ## pixel = without title bar
-default_border none
+default_border pixel 3
 default_floating_border normal
 
 # Gaps
