@@ -16,7 +16,7 @@ alias rm="rm -i"
 
 # exports
 PS1='[\u@\h \W]\$ '
-EDITOR=vim
+export EDITOR=vim
 export XDG_CONFIG_HOME=${HOME}/.config
 #export PATH=$PATH:${HOME}/.local/bin:${HOME}/scripts:/usr/local/go/bin
 #export MONITOR=$(xrandr -q | awk '/ connected/ {print $1}')
