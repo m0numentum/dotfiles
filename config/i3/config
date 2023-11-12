@@ -91,6 +91,7 @@ tiling_drag modifier titlebar
 ################
 
 exec --no-startup-id dunst -c $home/.config/dunst/dunstrc
+exec --no-startup-id picom --config $home/.config/picom/picom.conf
 
 #########################
 ####### Shortcuts #######
