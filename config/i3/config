@@ -106,7 +106,7 @@ bindsym $alt+F4 kill
 bindsym $mod+Shift+a kill
 
 ## Start dmenu (a program launcher)
-bindsym $alt+F2 exec --no-startup-id rofi -show drun
+bindsym $alt+F2 exec --no-startup-id rofi -show drun -theme $home/.config/rofi/launcher.rasi
 
 ## Start power menu
 #bindsym Control+Escape exec --no-startup-id $home/bin/power_menu.sh
