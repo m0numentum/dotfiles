@@ -95,7 +95,7 @@
     frame_width = 3
 
     # Defines color of the frame around the notification window.
-    frame_color = "#8AADF4"
+    frame_color = "#EFF1F5"
 
     # Size of gap to display between notifications - requires a compositor.
     # If value is greater than 0, separator_height will be ignored and a border
@@ -205,11 +205,12 @@
 
     # Align icons left/right/top/off
     icon_position = left
+    icon_path = /usr/share/icons/Papirus/22x22/:/usr/share/icons/Papirus/16x16/:/usr/share/icons/Papirus/24x24/:/usr/share/icons/Papirus/22x22/actions/
 
     # Scale small icons up to this size, set to 0 to disable. Helpful
     # for e.g. small files or high-dpi screens. In case of conflict,
     # max_icon_size takes precedence over this.
-    min_icon_size = 32
+    min_icon_size = 16
 
     # Scale larger icons down to this size, set to 0 to disable
     max_icon_size = 128
@@ -308,23 +309,23 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#24273A"
-    foreground = "#CAD3F5"
+    background = "#EFF1F5"
+    foreground = "#4C4F69"
     timeout = 10
     # Icon for notifications with low urgency, uncomment to enable
     #default_icon = /path/to/icon
 
 [urgency_normal]
-    background = "#24273A"
-    foreground = "#CAD3F5"
+    background = "#EFF1F5"
+    foreground = "#4C4F69"
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
     #default_icon = /path/to/icon
 
 [urgency_critical]
-    background = "#24273A"
-    foreground = "#CAD3F5"
-    frame_color = "#F4A97F"
+    background = "#EFF1F5"
+    foreground = "#4C4F69"
+    frame_color = "#FE640B"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
     #default_icon = /path/to/icon
