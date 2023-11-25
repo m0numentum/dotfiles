@@ -201,6 +201,16 @@ bindsym $mod+Shift+r restart
 ## Exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-msg exit"
 
+# Sound control
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+# Alternatives shortcuts when there's no special keys for sound on a keyboard
+bindsym $mod+Shift+equal exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $home/bin/change_vol.sh
+bindsym $mod+equal exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $home/bin/change_vol.sh
+bindsym $mod+parenright exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $home/bin/change_vol.sh
+
 ## Resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
