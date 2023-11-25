@@ -9,9 +9,9 @@
 
 /*****----- Configuration -----*****/
 configuration {
-    modi:                       "drun";
+    display-drun:               "Apps";
+    display-drun-format:        "{icon} {name}";
     show-icons:                 true;
-    window-format:              "{w} · {c} · {t}";
 }
 
 /*****----- Global Properties -----*****/
@@ -66,9 +66,9 @@ listbox {
 inputbar {
     enabled:                     true;
     spacing:                     10px;
-    padding:                     80px 60px;
+    padding:                     110px 60px;
     background-color:            transparent;
-    background-image:            url("~/.config/rofi/images/cat_space_artwork.jpg", width);
+    background-image:            url("~/.config/rofi/images/clouded_sky.jpg", width);
     text-color:                  @foreground;
     orientation:                 horizontal;
     children:                    [ "textbox-prompt-colon", "entry", "dummy"];
@@ -122,7 +122,7 @@ listview {
 element {
     enabled:                     true;
     spacing:                     10px;
-    padding:                     4px;
+    padding:                     8px;
     border-radius:               100%;
     background-color:            transparent;
     text-color:                  @foreground;
@@ -185,4 +185,4 @@ error-message {
     text-color:                  @foreground;
 }
 
-@import "colors" 
+@import "colors.rasi" 
