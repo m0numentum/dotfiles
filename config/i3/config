@@ -96,6 +96,7 @@ exec --no-startup-id /usr/bin/polybar -c $home/.config/polybar/config.ini wm
 exec --no-startup-id /usr/bin/polybar -c $home/.config/polybar/config.ini audio
 exec --no-startup-id /usr/bin/polybar -c $home/.config/polybar/config.ini date
 exec --no-startup-id /usr/bin/polybar -c $home/.config/polybar/config.ini net
+exec --no-startup-id /usr/bin/feh --bg-scale $home/Images/clouded_sky.jpg
 
 #########################
 ####### Shortcuts #######
