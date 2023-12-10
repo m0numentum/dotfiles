@@ -68,7 +68,7 @@ inputbar {
     spacing:                     10px;
     padding:                     110px 60px;
     background-color:            transparent;
-    background-image:            url("~/.config/rofi/images/clouded_sky.jpg", width);
+    background-image:            url("~/Images/clouded_sky.jpg", width);
     text-color:                  @foreground;
     orientation:                 horizontal;
     children:                    [ "textbox-prompt-colon", "entry", "dummy"];
