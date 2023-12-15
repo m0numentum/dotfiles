@@ -107,6 +107,7 @@ bindsym $mod+Return exec xfce4-terminal
 
 ## Kill focused window
 
+bindsym $mod+x kill
 bindsym $alt+F4 kill
 bindsym $mod+Shift+a kill
 
@@ -117,7 +118,7 @@ bindsym $alt+F2 exec --no-startup-id rofi -show drun -theme $home/.config/rofi/l
 #bindsym Control+Escape exec --no-startup-id $home/bin/power_menu.sh
 
 ## Lock screen
-bindsym Control+Shift+l exec --no-startup-id /usr/bin/betterlockscreen -l blur 
+bindsym Control+Shift+l exec --no-startup-id $home/bin/lock.sh
 
 ## Change focus
 bindsym $mod+j focus left
