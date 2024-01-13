@@ -1,0 +1,82 @@
+{
+  "diagnostic.displayByAle": true,
+  "yaml.schemas": {
+    "file:///home/fdesjeunes/.config/nvim/flux-schemas/helmrelease-helm-v2beta1.json": [
+      "/helm-release*.yaml"
+    ],
+    "file:///home/fdesjeunes/.config/nvim/flux-schemas/helmrepository-source-v1beta2.json": [
+      "/home/fdesjeunes/repos/infrastructure/clusters/base/flux-system/charts/helm/*.yaml"
+    ],
+    "file:///home/fdesjeunes/.config/nvim/flux-schemas/gitrepository-source-v1beta2.json": [
+      "/home/fdesjeunes/repos/infrastructure/clusters/base/flux-system/charts/git/*.yaml"
+    ],
+    "https://json.schemastore.org/kustomization.json": [
+      "/kustomization.yaml"
+    ],
+    "Kubernetes": [
+      "*.yaml",
+      "!helm-release*.yaml",
+      "!/home/fdesjeunes/repos/infrastructure/clusters/base/flux-system/charts/helm/*.yaml",
+      "!/home/fdesjeunes/repos/infrastructure/clusters/base/flux-system/charts/git/*.yaml",
+      "!/gotk-sync.yaml",
+      "!kustomization.yaml"
+    ]
+  },
+  "languageserver": {
+    "terraform": {
+      "command": "terraform-ls",
+      "args": [
+        "serve"
+      ],
+      "filetypes": [
+        "terraform",
+        "tf"
+      ],
+      "settings": {}
+    },
+    "ansible": {
+      "enable": true,
+      "filetypes": [
+        "yaml.ansible"
+      ]
+    },
+    "jedi": {
+      "enable": true,
+      "filetypes": [
+        "python"
+      ],
+      "startupMessage": false,
+      "markupKindPreferred": "plaintext",
+      "command": "jedi-language-server",
+      "trace.server": "off",
+      "jediSettings.autoImportModules": [],
+      "jediSettings.caseInsensitiveCompletion": true,
+      "jediSettings.debug": false,
+      "executable.command": "jedi-language-server",
+      "executable.args": [],
+      "codeAction.nameExtractFunction": "jls_extract_def",
+      "codeAction.nameExtractVariable": "jls_extract_var",
+      "completion.disableSnippets": false,
+      "completion.resolveEagerly": false,
+      "completion.ignorePatterns": [],
+      "diagnostics.enable": true,
+      "diagnostics.didOpen": true,
+      "diagnostics.didChange": true,
+      "diagnostics.didSave": true,
+      "hover.enable": true,
+      "hover.disable.keyword.all": false,
+      "hover.disable.keyword.names": [],
+      "hover.disable.keyword.fullNames": [],
+      "workspace.extraPaths": [],
+      "workspace.environmentPath": "/path/to/venv/bin/python",
+      "workspace.symbols.maxSymbols": 20,
+      "workspace.symbols.ignoreFolders": [
+        ".nox",
+        ".tox",
+        ".venv",
+        "__pycache__",
+        "venv"
+      ]
+    }
+  }
+}
