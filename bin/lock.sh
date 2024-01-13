@@ -6,4 +6,5 @@ i3lock -u \
     --date-color="f4dbd6" \
     --time-font="FiraCode Nerd Font" \
     --date-font="FiraCode Nerd Font" \
-    --time-str="󰍁 %H:%M"
+    --time-str="󰍁 %H:%M" \
+    --date-str="%A %d %B %Y"

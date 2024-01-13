@@ -4,8 +4,9 @@
 msgTag="myvolume"
 
 # Query pactl for the current volume and whether or not the speaker is muted
-volume="$(pactl list sinks | grep '^[[:space:]]Volume:' | head -n $(( $SINK + 1 )) | tail -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,')"
-mute="$(pactl list sinks | grep '^[[:space:]]Mute:' | sed -e 's/.*: \(\w\)/\1/')"
+default_sink=$(pactl get-default-sink);
+volume="$(pactl get-sink-volume ${default_sink} | grep '^Volume:' | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,')"
+mute="$(pactl get-sink-mute ${default_sink} | grep '^Mute:' | sed -e 's/.*: \(\w\)/\1/')"
 
 if [[ $volume == 0 || "$mute" == "yes" ]]; then
     # Show the sound muted notification
