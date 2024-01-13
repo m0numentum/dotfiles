@@ -1,0 +1,43 @@
+add_newline = false
+
+command_timeout = 3000
+
+format = """
+$kubernetes\
+$terraform\
+$python\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status
+$character"""
+
+[git_branch]
+style = "bold red"
+
+[directory]
+style = "bold yellow"
+
+[git_status]
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
+
+[kubernetes]
+style = "bold cyan"
+format = "[$symbol$context]($style) "
+disabled = false
+
+[terraform]
+format = "[$symbol$version]($style) "
+style = "bold purple"
+disabled = false
+detect_extensions = ["tf", "tfvars"]
+symbol = "󱁢 "
+
+[python]
+symbol = " "
+pyenv_version_name = true
+python_binary = ["./venv/bin/python", "python"]
+style = "bold green"
