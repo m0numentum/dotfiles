@@ -15,10 +15,10 @@ window {
     text-color:          @foreground;
     border:              0px 0px 0px 0px;
     border-radius:       20px;
-    width:               300px;
-    height:              200px;
-    location:            northeast;
-    anchor:              northeast;
+    width:               702px;
+    height:              500px;
+    location:            center;
+    anchor:              center;
     x-offset:            -20px;
     y-offset:            35px;
 }
@@ -38,6 +38,14 @@ prompt {
     padding:             11px 16px 8px 11px;
     background-color:    @background;
     text-color:          @foreground;
+}
+
+entry {
+  background-color: @background;
+  text-color: @foreground;
+  placeholder-color: @foreground;
+  expand: true;
+  blink: true;
 }
 
 inputbar {
@@ -99,7 +107,7 @@ element-text {
 
 element selected {
     background-color:               @selected;
-    text-color:                     @foreground;
+    text-color:                     @background;
     border:                         0px 0px 0px 0px;
     border-radius:                  20px;
     border-color:                   @active;
