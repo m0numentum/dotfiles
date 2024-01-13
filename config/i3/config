@@ -8,7 +8,7 @@ set $mod Mod4
 set $alt Mod1
 
 # HOME variable
-set $home /home/fradsj
+set $home /home/fdesjeunes
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -77,7 +77,7 @@ default_floating_border normal
 
 # Gaps
 gaps inner 20
-gaps top 30
+gaps top 5
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -91,19 +91,22 @@ tiling_drag modifier titlebar
 ################
 
 exec --no-startup-id dunst -c $home/.config/dunst/dunstrc
-exec --no-startup-id picom --config $home/.config/picom/picom.conf
-exec --no-startup-id /usr/bin/polybar -c $home/.config/polybar/config.ini wm
-exec --no-startup-id /usr/bin/polybar -c $home/.config/polybar/config.ini audio
-exec --no-startup-id /usr/bin/polybar -c $home/.config/polybar/config.ini date
-exec --no-startup-id /usr/bin/polybar -c $home/.config/polybar/config.ini net
+exec --no-startup-id picom --vsync --config $home/.config/picom/picom.conf
+#exec --no-startup-id /usr/bin/polybar -c $home/.config/polybar/config.ini wm
+#exec --no-startup-id /usr/bin/polybar -c $home/.config/polybar/config.ini audio
+#exec --no-startup-id /usr/bin/polybar -c $home/.config/polybar/config.ini date
+#exec --no-startup-id /usr/bin/polybar -c $home/.config/polybar/config.ini net
+#exec --no-startup-id /usr/bin/polybar -c $home/.config/polybar/config.ini bat
+exec --no-startup-id /usr/bin/xfce4-power-manager
 exec --no-startup-id /usr/bin/feh --bg-scale $home/Images/clouded_sky.jpg
+exec --no-startup-id /usr/bin/flameshot
 
 #########################
 ####### Shortcuts #######
 #########################
 
 ## Start a terminal
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec /usr/bin/xfce4-terminal
 
 ## Kill focused window
 
@@ -112,7 +115,7 @@ bindsym $alt+F4 kill
 bindsym $mod+Shift+a kill
 
 ## Start dmenu (a program launcher)
-bindsym $alt+F2 exec --no-startup-id rofi -show drun -theme $home/.config/rofi/launcher.rasi
+bindsym $mod+d exec --no-startup-id rofi -m "-4" -show drun -theme $home/.config/rofi/launcher.rasi
 
 ## Start power menu
 #bindsym Control+Escape exec --no-startup-id $home/bin/power_menu.sh
@@ -182,7 +185,6 @@ bindsym $mod+minus workspace number $ws6
 bindsym $mod+egrave workspace number $ws7
 bindsym $mod+underscore workspace number $ws8
 bindsym $mod+ccedilla workspace number $ws9
-bindsym $mod+agrave workspace number $ws10
 
 ## Move focused container to workspace
 bindsym $mod+Shift+ampersand move container to workspace number $ws1
@@ -194,7 +196,6 @@ bindsym $mod+Shift+minus move container to workspace number $ws6
 bindsym $mod+Shift+egrave move container to workspace number $ws7
 bindsym $mod+Shift+underscore move container to workspace number $ws8
 bindsym $mod+Shift+ccedilla move container to workspace number $ws9
-bindsym $mod+Shift+agrave move container to workspace number $ws10
 
 ## Reload the configuration file
 bindsym $mod+Shift+c reload
@@ -206,14 +207,16 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-msg exit"
 
 # Sound control
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2% && $home/bin/change_vol.sh
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2% && $home/bin/change_vol.sh
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $home/bin/change_vol.sh
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $home/bin/change_vol.sh
 # Alternatives shortcuts when there's no special keys for sound on a keyboard
-bindsym $mod+Shift+equal exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $home/bin/change_vol.sh
-bindsym $mod+equal exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $home/bin/change_vol.sh
+bindsym $mod+Shift+equal exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2% && $home/bin/change_vol.sh
+bindsym $mod+equal exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2% && $home/bin/change_vol.sh
 bindsym $mod+parenright exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $home/bin/change_vol.sh
+
+bindsym Print exec --no-startup-id flameshot gui
 
 ## Resize window (you can also use the mouse for that)
 mode "resize" {
@@ -241,3 +244,7 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+for_window [instance="keepassxc" title="Générer un mot de passe"] stacking enable
+for_window [instance="keepassxc" title=".* - KeePassXC"] floating enable, move scratchpad
+bindsym $mod+Shift+s scratchpad show
