@@ -1,0 +1,10 @@
+[Unit]
+Description = A sleep service to enforce polybar to start after i3
+After = pipewire.service
+
+[Service]
+Type = oneshot
+ExecStart = /usr/bin/sleep 30
+
+[Install]
+WantedBy = pipewire.service

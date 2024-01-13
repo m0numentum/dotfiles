@@ -1,0 +1,17 @@
+[Unit]
+Description = Polybar
+After = sleep.service
+StartLimitInterval = 200
+StartLimitBurst = 5
+
+[Service]
+Type = simple
+Environment = "DISPLAY=:0"
+Environment = "XAUTHORITY=/home/fdesjeunes/.Xauthority"
+Environment = "MONITOR=eDP-1"
+ExecStart = /usr/bin/polybar -c /home/fdesjeunes/.config/polybar/config.ini root
+Restart = always
+RestartSec = 10
+
+[Install]
+WantedBy = sleep.service
